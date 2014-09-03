@@ -1,0 +1,88 @@
+fix distance between towers: create public variable of towers in an array, building a tower appends the list and publicVar's it
+then a foreach loop checking distance between position and tower position, and if less than 2500, adds 1 to a counter.
+if the counter is less than 0 it builds, else hint too close to another tower.
+
+fix findsafe pos: code works on tower 2, needs to be added to all other towers, and possibly other things
+that use FindSafePos
+
+need markers for create vehicle location,deposit vehicle location,repair vehicle location(helipad will do all the for choppers)
+need logic for making base fortification materials.
+need logic for banking at main base
+
+need dialog for barracks/armory, need dialog for vehicle factory. Possibly a new learning expierence?
+inside vehicle factory dialog I need HEMTT's for building FOB's (Towers 2,3, and 4)
+
+remove/diable create fob truck from dialog when one exists
+
+
+OLD SHIT:::
+set up other base parts, test trigger to create
+
+attach dialogs to infostands (addaction scripts)
+display base resources on infostand dialogs (dynamic text)
+
+turn on and configure R3F
+
+Set up "resource crates"
+
+attach deposit resources button to dialog
+
+make deposit/withdraw resources script
+SUGGESTION: Make area trigger or something then do a foreach of type resource crate,
+delete crate,
+if (crate size(small/med/LG)) add resouces to base resource var
+and add credits to players credit variable
+
+attach withdraw resources button to dialog....
+
+GUI displaying Players Credits, status of MOB, FOB2, FOB3, FOB4
+
+
+//////////////////
+//"polish" stuff:
+//////////////////
+3d markers on infostands, depositories, other stuff
+
+fix positioning of created base parts
+
+set colors to addactions (build MOB for side color)
+
+finish configuring R3F for specific vehicles tow/can be towed ect...
+
+finish setting up base parts (barracks, factory)
+
+re-skin HEMTT's for sides (Blue, Red, Green)
+
+prevent base HEMTT's from being put in depots
+
+
+
+///////////////////////
+///////Base Parts MOB//
+///////////////////////
+??Need place to buy fortification kits.
+
+Main tower: Deposit/Withdraw resources, base control, bank
+Barracks: Change Uniform and  spawn weapon crates, deposit crates
+Vehicle Factory: Spawn Ground/Air vehicles, Deposit Vehicles, withdraw vehicles, repair vehicles
+Radar
+
+
+///////////////////////
+///////Base Parts FOB//
+///////////////////////
+??Need place to buy fortification kits.
+
+Main Tower: Deposit/Withdraw resources, base control
+Barracks: Change Uniform and spawn weapon crates, deposit crates
+Vehicle Factory: Deposit/Spawn and repair only (can't buy new ones)
+Radar
+
+
+///////////////////////
+///////Outposts?///////
+///////////////////////
+Main building of some sort.
+Small depsoitory of some sort.(Ground vehicles and wepon crates only?)
+No spawn, no vehicle factory.
+Small radar.

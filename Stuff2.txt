@@ -1,0 +1,128 @@
+http://madbull.arma.free.fr/A3_stable_1.20.124746_CfgVehicles_tree.html
+http://team-r3f.org/madbull/logistics/EN_DOCUMENTATION
+
+"Land_InfoStand_V1_F"
+
+Land_JumpTarget_F
+Land_LampHalogen_F
+
+
+Resources: "Land_MetalBarrel_F"
+100 each
+
+Fortification Box:"Land_CargoBox_V1_F"
+
+Small Fortification Box Contents:
+
+Medium Fortification Box Contents:
+
+Large Fortification Box Contents:
+
+//West Main Operations Base Controls
+
+W_T1_RescDeposit
+W_T1_BaseCTRL
+W_T1_FortKits
+W_T1_BarracksCTRL
+W_T1_ArmCTRL
+W_T1_VehCTRL
+
+
+Structures:
+Base tower
+barracks/armory: place to spawn, buy uniforms, buy crates, heal
+vehicle factory: spawn wheeled vehicles, spawn tanks, spawn choppers
+radar big
+
+
+//West Forward Operations Base Controls
+W_T2_Marker
+"FOB"
+
+W_T2_RescDeposit
+W_T2_BaseCTRL
+W_T2_FortKits
+W_T2_BarracksCTRL
+W_T2_Depot
+
+W_T3_RescDeposit
+W_T3_BaseCTRL
+W_T3_FortKits
+W_T3_BarracksCTRL
+W_T3_Depot
+
+W_T4_RescDeposit
+W_T4_BaseCTRL
+W_T4_FortKits
+W_T4_BarracksCTRL
+W_T4_Depot
+
+//East Main Operations Base Controls
+E_T1_RescDeposit
+E_T1_BaseCTRL
+E_T1_FortKits
+E_T1_BarracksCTRL
+E_T1_ArmCTRL
+E_T1_VehCTRL
+
+//East Forward Operations Base Controls
+E_T2_RescDeposit
+E_T2_BaseCTRL
+E_T2_FortKits
+E_T2_BarracksCTRL
+E_T2_Depot
+
+E_T3_RescDeposit
+E_T3_BaseCTRL
+E_T3_FortKits
+E_T3_BarracksCTRL
+E_T3_Depot
+
+E_T4_RescDeposit
+E_T4_BaseCTRL
+E_T4_FortKits
+E_T4_BarracksCTRL
+E_T4_Depot
+
+//Guer Main Operations Base Controls
+G_T1_RescDeposit
+G_T1_BaseCTRL
+G_T1_FortKits
+G_T1_BarracksCTRL
+G_T1_ArmCTRL
+G_T1_VehCTRL
+
+//Guer Forward Operations Base Controls
+G_T2_RescDeposit
+G_T2_BaseCTRL
+G_T2_FortKits
+G_T2_BarracksCTRL
+G_T2_Depot
+
+G_T3_RescDeposit
+G_T3_BaseCTRL
+G_T3_FortKits
+G_T3_BarracksCTRL
+G_T3_Depot
+
+G_T4_RescDeposit
+G_T4_BaseCTRL
+G_T4_FortKits
+G_T4_BarracksCTRL
+G_T4_Depot
+
+//Tower Self Destruct Dialogs
+W_T1_SelfDestruct
+W_T2_SelfDestruct
+W_T3_SelfDestruct
+W_T4_SelfDestruct
+
+E_T1_SelfDestruct
+E_T2_SelfDestruct
+E_T3_SelfDestruct
+E_T4_SelfDestrcut
+
+G_T1_SelfDestruct
+G_T2_SelfDestruct
+G_T3_SelfDestruct
+G_T4_SelfDestruct

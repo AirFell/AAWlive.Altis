@@ -1,0 +1,138 @@
+Barracks: Used for spawning at the bases, changing uniform/kit, and purchasing ammo/weapon crates.
+**Note** Each player starts with a default loadout. Each Barracks has 3 levels (upgrades)- 0 is default(spawning only).
+
+	Default Uniform/gear: Guns will be in the same order as Sa'Matras KotH
+		West: "B_Soldier_F" remove items: weapons&mags, NV goggles; add default weapons
+		East: "O_Soldier_F" remove items: weapons&mags, NV goggles; add default weapons
+		Guer: "I_soldier_F" remove items: weapons&mags, NV goggles; add default weapons
+
+Uniform/Kits:
+	Level 1 uniforms:
+		West:
+			Engineer "B_engineer_F"
+			Medic "B_medic_F"
+		East:
+			Engineer "O_engineer_F"
+			Medic "O_medic_F"
+		Guer:
+			Engineer "I_engineer_F"
+			Medic "I_medic_F"
+
+	Level 2 Uniforms:
+		West:
+			SpecOP "B_recon_F" or "B_recon_M_F"
+			Sniper "B_sniper_F"
+		East:
+			SpecOP "O_soldierU_F"
+			Sniper "O_sniper_F"
+		Guer:
+			SpecOP "I_G_Soldier_SL_F" or "I_G_Soldier_TL_F"
+			Sniper "I_Sniper_F"
+
+	Level 3 Uniforms: These uniforms must be worn to fly/drive higher end vehicles
+		West:
+			Pilot "B_Helipilot_F"
+			Tank Crew "B_crew_F"
+		East:
+			Pilot "O_helipilot_F"
+			Tank Crew "O_crew_F"
+		Guer:
+			Pilot "I_helipilot_F"
+			Tank Crew "I_crew_F"
+
+Ammo/Weapon Crates:
+	Level 1 crates: basic rifles/smg's w/ammo w/nades
+
+
+	Level 2 crates: basic rifles + silencers, GL's, basic snipers, night vision
+
+
+	Level 3 crates: good snipers, rocket launchers, ect... , thermal designators
+
+
+
+Vehicle Factory: Used for buying vehicles, repairing vehicles, storing vehicles(individual-only level)
+**NOTE** Each Factory has 3 levels(upgrades)- 0 is default(repair/storage enabled, purchase basic un-armed vehicles)
+
+Soft: Soft wheeled vehicles
+	Level 0:Unarmed Vehicles
+		Quadbike "B_Quadbike_01_F"
+		Hunter "B_MRAP_01_F"
+		Offroad Armed "B_G_Offroad_01_armed_F"
+		Ifrit "O_MRAP_02_F"
+		Strider "I_MRAP_03_F"
+
+
+	Level 1: Soft armed vehicles(HMG)
+		Hunter HMG "B_MRAP_01_hmg_F"
+		Ifrit HMG "O_MRAP_02_hmg_F"
+		Strider HMG "I_MRAP_03_hmg_F"
+
+	Level 2: More soft armed vehicles(GMG)
+		Hunter GMG "B_MRAP_01_gmg_F"
+		Ifrit GMG "O_MRAP_02_gmg_F"
+		Strider GMG "I_MRAP_03_gmg_F"
+
+	Level 3: none
+
+
+Armor: Hard wheeled vehicles and tracked vehicles
+	Level 0: none
+
+	Level 1: none
+
+
+	Level 2: low-tier armor
+		AMV-7 Marshall "B_APC_Wheeled_01_cannon_F"
+		AFV-4 Gorgon "I_APC_Wheeled_03_cannon_F"
+		MSE-3 Marid "O_APC_Wheeled_02_rcws_F"
+
+
+	Level 3: high-tier armor
+		M2A4 Slammer UP "B_MBT_01_TUSK_F"
+		IFV-6a Cheetah "B_APC_Tracked_01_AA_F"
+		BTR-K Kamysh "O_APC_Tracked_02_cannon_F"
+		FV-720 Mora "I_APC_tracked_03_cannon_F"
+		MBT-52 Kuma "I_MBT_03_cannon_F"
+
+
+Air: helis & jets
+	Level 0: hummingbird
+		MH-9 Hummingbird "B_Heli_Light_01_F"
+
+	Level 1:basic heli
+		Po-30 Orca Unarmed "O_Heli_Light_02_unarmed_F"
+		CH-49 Mohawk "I_Heli_Transport_02_F" *****this is the only one that can R3F lift ground vehicles
+		WY-55 Hellcat Unarmed "I_Heli_light_03_unarmed_F"
+
+
+
+	Level 2:basic weaponized helis
+		AH-9 Pawnee "B_Heli_Light_01_armed_F"
+		UH-80 Ghost Hawk "B_Heli_Transport_01_camo_F"
+		Po-30 Orca "O_Heli_Light_02_F"
+		WY-55 Hellcat "I_Heli_light_03_F"
+
+
+
+	Level 3:high-tier helis, jets
+		AH-99 Blackfoot "B_Heli_Attack_01_F"
+		A-164 Wipeout "B_Plane_CAS_01_F"
+		Mi-48 Kajman "O_Heli_Attack_02_F"
+		To-199 Neophron "O_Plane_CAS_02_F"
+		A-143 Buzzard (CAS) "I_Plane_Fighter_03_CAS_F"
+		A-143 Buzzard (AA) "I_Plane_Fighter_03_AA_F"
+
+
+
+
+
+
+Sea: boats
+	Level 0:
+		Assault Boat "I_Boat_Transport_01_F"
+
+
+	Level 1:
+		Speedboat Minigun "I_Boat_Armed_01_minigun_F"
+		Speedboat HMG "O_Boat_Armed_01_hmg_F"

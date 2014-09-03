@@ -1,0 +1,77 @@
+/*
+Resources logic:
+
+Each base will have its own resource variable.
+
+Example:
+HQ_West_1_Resources = X
+
+Each player will have a credit variable.
+
+Example:
+player credits = X
+
+Each resource crate will have a name, and a corresponding value:
+resourceBarrel (100 resources/100 credits)
+
+
+
+This will be cumulative and be saved on the server.
+An area trigger will be added to an area by the HQ Tower that players can set
+resource crates into.
+
+When a player moves a resource crate into the area, the trigger will then add
+the resource crates value of resources to the HQ resource variable, and a
+corresponding amount of credits to the players individual credit variable.
+
+At the top of the HQ tower will be an infostand for each function of the HQ,
+these infostands will at as an access panel for each base building once its
+been built.
+
+Each Access panel will access and display the local base resources, upgrade cost
+(if available), and resource cost for generating units (specific to each factory).
+*/
+
+MOB Tower:
+	Construction Module:
+		Base Parts: //(Restricted to being within the MOB towers area (500m?), each part limit 1):
+			MOB Wall Kit(250r): //Various fortification objects
+			Resource Generator(500r)(cant be upgraded): //Creates a small resource crate every x mins
+			Barracks(750r) //Needed for spawning, players can purchase different uniforms w/ a default kit.
+				Level 0()default: enables Spawning at base.
+				Level 1(250r): Engineer(10c/25r), Medic(10c/50r)
+				Level 2(500r): Spec Op(25c/50r), Sniper(25c/50r)
+				Level 3(750r): Pilot (50c/50r)(uniform required to purchase air vehicles), Tank Crew (50c/50r)(uniform required to purchase armored vehicles)
+
+			Armoury(750r)(Upgrades?)://Builds individual weapons, addons and ammo/ builds pre-defined weapon crates.
+			Vehicle Factory(1500r): Builds vehicles. When a player purchases a vehicle, it will move the player into the driver seat on spawn. Jets will start out flying.
+				Level 0(default): Allows building of soft basic vehicles, ground veh repair site, creates landing pad(also repairs helis)
+				Level 1(1000r): Allows building of armed wheeled vehicles, basic (unarmed)helis
+				Level 2(2000r): allows low tier armor, armed helis, low tier jets
+				Level 3(3000r): allows high-tier armor, high-tier helis, high-tier jets
+
+			Radar Site(1000r): //Constructs the small radar tower, upgrade makes the bigger radar tower
+				Level 0(default): small local radar radius
+				Level 1 (1000r): double radar radius
+
+		FOB Tower: //Limit 3
+			Construction Module:
+				Base Parts:
+					FOB Wall Kit(150r): //Various fortification objects
+					Barracks(750r) //Needed for spawning, players can purchase different uniforms w/ a default kit.
+						Level 0()default: enables Spawning at base.
+						Level 1(250r): Engineer(10c/25r), Medic(10c/50r)
+						Level 2(500r): Spec Op(25c/50r), Sniper(25c/50r)
+						Level 3(750r): Pilot (50c/50r)(uniform required to purchase air vehicles), Tank Crew (50c/50r)(uniform required to purchase armored vehicles)
+
+					Weapon Depot(500r): Allows playerse to deposit weapon crates.
+					Vehicle Depot(750r): Allows players to deposit vehicles at the FOB to be retrieved later.
+					Heal/Repair Module: for vehicles and players to heal and repair.
+					Radar Site(1000r): //Constructs the small radar tower, upgrade makes the bigger radar tower
+						Level 0(default): small local radar radius
+						Level 1 (1000r): double radar radius
+				OutPost Station:
+					Base Parts:
+						OutPost
+					
+		Purchasable:

@@ -1,0 +1,37 @@
+////////////////BASE CONTROL////////////////
+
+Barracks Tab:
+	Progress bar showing its status of built/tier
+	build button to build the module
+	upgrade button upgrade the module
+	Description of the module and upgrade unlocks
+
+Vehicles Tab:
+	Progress bar showing its status of built/tier
+	build button to build the module
+	upgrade button upgrade the module
+	Description of the module and upgrade unlocks
+
+Radar Tab:
+	Only a build button, no upgrades
+	Description of what the module does
+
+////////////////Resource Deposit////////////////
+
+Resource Depot tab:
+	Button to deposit resources
+	Button to withdraw resources
+	text below to explain the income for deposit
+	text below to explain the cost for withdraw
+
+Bank Tab:
+	Text showing your current amount "on" the player
+	Text showing current amount in the bank
+	Deposit buttons by amount (100/250/500/1000)
+	Withdraw buttons by amount (100/250/500/1000)
+
+////////////////Fortifications Store////////////////
+////////////////Barracks////////////////
+////////////////Armoury////////////////
+////////////////Vehicle Factory////////////////
+////////////////FOB Depot////////////////
