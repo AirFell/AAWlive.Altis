@@ -746,7 +746,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			position[]={23904.389,3.1900001,18437.113};
@@ -754,7 +754,19 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="null = []execVM ""client\systems\factory\factory_Diag.sqf"";";
+			expActiv="null = []execVM ""client\dialogs\baseControl\baseControl_Load.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={23975.338,3.1900001,18334.613};
+			activationBy="BRAVO";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="null = []execVM ""client\dialogs\factoryControl\factoryControl_Load.sqf"";";
 			class Effects
 			{
 			};
