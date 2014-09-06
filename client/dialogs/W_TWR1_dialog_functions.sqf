@@ -14,31 +14,31 @@ switch (_this select 0) do{
 				
 				if (W_TWR1_Barracks_Counter == 0) then {
 					if (W_TWR1_Resources > 499) then {
+						
 						_dir = getDir W_TWR1;
-						_dir = _dir + 90;
-						_pos = getPos W_TWR1_Deposit_Marker;
-						_newPos = [_pos, 30, 45, 30, 0, 10, 0] call BIS_fnc_findSafePos;
+						_pos = W_TWR1_Deposit_Marker modelToWorld [0,-50,0];
+						_newPos = [_pos, 0, 60, 20, 0, 10, 0] call BIS_fnc_findSafePos;
 						
 						//creates the original tower
 						W_TWR1_Barracks = createVehicle ["CamoNet_BLUFOR_open_F", _newPos, [], 0, "None"];
-						W_TWR1_Barracks setDir _dir;
-						W_TWR1_Barracks_Counter = 1;
-						publicVariable "W_TWR1_Barracks_Counter";
+						_shed setDir _dir + 180;
+						_shed setPos _newPos;
 						W_TWR1_Barracks setVariable ["R3F_LOG_disabled", true, true];
+						W_TWR1_Barracks setVehicleVarName "W_TWR1_Barracks";
+						publicVariable "W_TWR1_Barracks";
 						
 						//creates and orients barracks/armory control infostand.
 						W_TWR1_Barracks_Ctrl = createVehicle ["Land_InfoStand_V2_F", _newPos, [], 0, "NONE"];
 						W_TWR1_Barracks_Ctrl attachTo [W_TWR1_Barracks,[0, 0, 0]];
 						W_TWR1_Barracks_Ctrl setDir 90;
 						W_TWR1_Barracks_Ctrl setVariable ["R3F_LOG_disabled", true, true];
-			
-						//Turns the needed objects into public variables so everyone can access them by name
-						W_TWR1_Barracks setVehicleVarName "W_TWR1_Barracks";
-						publicVariable "W_TWR1_Barracks";
-			
 						W_TWR1_Barracks_Ctrl setVehicleVarName "W_TWR1_Barracks_Ctrl";
 						publicVariable "W_TWR1_Barracks_Ctrl";
-					
+			
+						//Set Counter so it doesn't build more than once.
+						W_TWR1_Barracks_Counter = 1;
+						publicVariable "W_TWR1_Barracks_Counter";
+
 						//create marker for player spawn point
 						W_TWR1_Respawn_Marker = createMarker ["respawn_west1", getPos W_TWR1_Barracks];
 						publicVariable "W_TWR1_Respawn_Marker";
@@ -69,9 +69,7 @@ switch (_this select 0) do{
 					if (W_TWR1_Resources > 749) then {
 					
 						_dir = getDir W_TWR1;
-//						_Offset = [0,50,0];
 						_pos = W_TWR1_Deposit_Marker modelToWorld [0,50,0];
-//						_newPos = [getPos W_TWR1_Deposit_Marker select 0, (getPos W_TWR1_Deposit_Marker select 1) +50, getPos W_TWR1_Deposit_Marker select 2];
 						_newPos = [_pos, 0, 60, 20, 0, 10, 0] call BIS_fnc_findSafePos;
 						
 						//creates the factory shed
