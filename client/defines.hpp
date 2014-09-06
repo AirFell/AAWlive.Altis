@@ -105,13 +105,49 @@ class RscFrame
     sizeEx = 0.03;
     text = "";
 };
+class MenuTitle
+{
+    type = CT_STATIC;
+    idc = -1;
+    style = ST_CENTER;
+    shadow = 2;
+    colorBackground[] = {.729, .513, .176, 1};
+    colorText[] = {1,1,1,0.9};
+    font = "PuristaLight";
+    sizeEx = 0.03;
+    text = "";
+};
+class Sidebar
+{
+    type = CT_STATIC;
+    idc = -1;
+    style = ST_CENTER;
+    
+    colorBackground[] = {.25, .25, .25, .8};
+    colorText[] = {1,1,1,0.9};
+    font = "PuristaLight";
+    sizeEx = 0.03;
+    text = "";
+};
+class Footer
+{
+    type = CT_STATIC;
+    idc = -1;
+    style = ST_CENTER;
+    
+    colorBackground[] = {.25, .25, .25, .8};
+    colorText[] = {1,1,1,0.9};
+    font = "PuristaLight";
+    sizeEx = 0.03;
+    text = "";
+};
 class Box
 {
     type = CT_STATIC;
     idc = -1;
     style = ST_CENTER;
     shadow = 2;
-    colorBackground[] = {0, 0, 0, 1};
+    colorBackground[] = {0, 0, 0, .8};
     colorText[] = {1,1,1,0.9};
     font = "PuristaLight";
     sizeEx = 0.03;
