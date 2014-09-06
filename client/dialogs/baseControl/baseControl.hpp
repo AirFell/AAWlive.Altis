@@ -190,15 +190,6 @@ class baseControl_Dialog
 		w = 0.2982 * safezoneW;
 		h = 0.238009 * safezoneH;
 	};
-	class BaseControl_MenuPicture: RscPicture
-	{
-		idc = -1;
-		text = "images\AAWLogov3.paa";
-		x = 0.0970351 * safezoneW + safezoneX;
-		y = 0.0749835 * safezoneH + safezoneY;
-		w = 0.16 * safezoneW;
-		h = 0.12 * safezoneH;
-	};
 };
 };
 
