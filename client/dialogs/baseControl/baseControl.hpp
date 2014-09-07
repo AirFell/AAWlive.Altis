@@ -150,7 +150,7 @@ class baseControl_Dialog
 		h = 0.0236006 * safezoneH;
 		sizeEx = .75 * GUI_GRID_H;
 	};
-	class BaseControl_BuildButton: RscButton
+	class BaseControl_BuildButton: RscButtonALT
 	{
 		idc = BUILDBUTTON;
 		text = "Build"; //--- ToDo: Localize;
@@ -160,7 +160,7 @@ class baseControl_Dialog
 		w = 0.0805931 * safezoneW;
 		h = 0.0340016 * safezoneH;
 	};
-	class BaseControl_UpgradeButton: RscButton
+	class BaseControl_UpgradeButton: RscButtonALT
 	{
 		idc = UPGRADEBUTTON;
 		text = "Upgrade"; //--- ToDo: Localize;

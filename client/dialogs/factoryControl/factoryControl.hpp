@@ -71,6 +71,7 @@ class factoryControl_Dialog
 	{
 		idc = LIGHTBUTTON;
 		text = "Light"; //--- ToDo: Localize;
+		onButtonClick = "[0] execVM 'client\dialogs\factoryControl\factoryControl_Populate.sqf'";
 		x = 0.279404 * safezoneW + safezoneX;
 		y = 0.25518985 * safezoneH + safezoneY;
 		w = 0.1 * safezoneW;
@@ -80,6 +81,7 @@ class factoryControl_Dialog
 	{
 		idc = HEAVYBUTTON;
 		text = "Heavy"; //--- ToDo: Localize;
+		onButtonClick = "[1] execVM 'client\dialogs\factoryControl\factoryControl_Populate.sqf'";
 		x = 0.279404 * safezoneW + safezoneX;
 		y = 0.32319285 * safezoneH + safezoneY;
 		w = 0.1 * safezoneW;
@@ -89,6 +91,7 @@ class factoryControl_Dialog
 	{
 		idc = AIRBUTTON;
 		text = "Air"; //--- ToDo: Localize;
+		onButtonClick = "[2] execVM 'client\dialogs\factoryControl\factoryControl_Populate.sqf'";
 		x = 0.279404 * safezoneW + safezoneX;
 		y = 0.39215785 * safezoneH + safezoneY;
 		w = 0.1 * safezoneW;
@@ -97,7 +100,8 @@ class factoryControl_Dialog
 		class BaseControl_SeaButton: RscButton
 	{
 		idc = SEABUTTON;
-		text = "Radar"; //--- ToDo: Localize;
+		text = "Sea"; //--- ToDo: Localize;
+		onButtonClick = "[3] execVM 'client\dialogs\factoryControl\factoryControl_Populate.sqf'";
 		x = 0.279404 * safezoneW + safezoneX;
 		y = 0.46112285 * safezoneH + safezoneY;
 		w = 0.1 * safezoneW;
@@ -105,11 +109,22 @@ class factoryControl_Dialog
 	};
 	class BaseControl_VehicleText: RscListBox
 	{
-		idc = -1;
+		idc = VEHICLELIST;
+		onLBSelChanged = "[] execVM 'client\dialogs\factoryControl\factoryControl_Price.sqf'";
 		x = 0.419407 * safezoneW + safezoneX;
 		y = 0.29599185 * safezoneH + safezoneY;
 		w = 0.24178 * safezoneW;
-		h = 0.238009 * safezoneH;
+		h = 0.30401815 * safezoneH;
+	};
+	class BaseControl_CostText: RscStructuredTextLeft
+	{
+		idc = COSTTEXT;
+		text = "Resources"; //--- ToDo: Localize;
+		x = 0.414308 * safezoneW + safezoneX;
+		y = 0.60001 * safezoneH + safezoneY;
+		w = 0.267965 * safezoneW;
+		h = 0.0544024 * safezoneH;
+		sizeEx = 0.5;
 	};
 	class BaseControl_Progress2: RscStructuredText
 	{
@@ -133,6 +148,7 @@ class factoryControl_Dialog
 		h = 0.0196006 * safezoneH;
 		sizeEx = .75 * GUI_GRID_H;
 	};
+
 	class BaseControl_Progress3: RscStructuredText
 	{
 		idc = PROGRESS3;
@@ -161,7 +177,7 @@ class factoryControl_Dialog
 		text = "Cancel"; //--- ToDo: Localize;
 		onButtonClick = "closeDialog 0;";
 		//onLoad = "(_this select 0) call compile preprocessFileLineNumers ""client\dialogs\baseControl\baseControl_Hides.sqf""";
-		x = 0.3321249 * safezoneW + safezoneX;
+		x = 0.429341 * safezoneW + safezoneX;
 		y = 0.666981 * safezoneH + safezoneY;
 		w = 0.0955931 * safezoneW;
 		h = 0.0340016 * safezoneH;
@@ -170,8 +186,9 @@ class factoryControl_Dialog
 	{
 		idc = PURCHASEBUTTON;
 		text = "Purchase"; //--- ToDo: Localize;
+		onButtonClick = "[] execVM 'client\dialogs\factoryControl\factoryControl_Purchase.sqf'";
 		//onLoad = "(_this select 0) []execVM ""client\dialogs\baseControl\baseControl_Hides.sqf""";
-		x = 0.570445 * safezoneW + safezoneX;
+		x = 0.550445 * safezoneW + safezoneX;
 		y = 0.666981 * safezoneH + safezoneY;
 		w = 0.0955931 * safezoneW;
 		h = 0.0340016 * safezoneH;

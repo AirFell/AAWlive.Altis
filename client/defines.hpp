@@ -239,12 +239,12 @@ class RscListBox
     idc = -1;
     text = "";
     w = 0.275;
-    h = 0.04;
+    h = 0.03;
     colorSelect[] = {1, 1, 1, 1};
     colorText[] = {1, 1, 1, 1};
     colorBackground[] = {0,0,0,0};
-    colorSelectBackground[] = {0.40, 0.43, 0.28, 0.5};
-    colorScrollbar[] = {0.2, 0.2, 0.2, 1};
+    colorSelectBackground[] = {1, 1, 1, 0.2};
+    colorScrollbar[] = {1, 1, 1, 1};
     arrowEmpty = "client\ui\ui_arrocombo_ca.paa";
     arrowFull = "client\ui\ui_arrocombo_active_ca.paa";
     wholeHeight = 0.45;
@@ -273,46 +273,6 @@ class RscListBox
 	};
 };
 
-class Rsclist : RscListBox
-{
-        /*type = CT_LISTBOX;
-        style = 69;
-        idc = -1;
-        text = "";
-        w = 0.275;
-        h = 0.04;
-        colorSelect[] = {1, 1, 1, 1};
-        colorText[] = {1, 1, 1, 1};
-        colorBackground[] = {0,0,0,0};
-        colorSelectBackground[] = {0.25,0.51,0.96,0.5};
-        colorScrollbar[] = {0.2, 0.2, 0.2, 1};
-        arrowEmpty = "client\ui\ui_arrocombo_ca.paa";
-        arrowFull = "client\ui\ui_arrocombo_active_ca.paa";
-        wholeHeight = 0.45;
-        rowHeight = 0.04;
-        color[] = {0.7, 0.7, 0.7, 1};
-        colorActive[] = {0,0,0,1};
-        colorDisabled[] = {0,0,0,0.3};
-        font = "PuristaMedium";
-        sizeEx = 0.023;
-        soundSelect[] = {"",0.1,1};
-        soundExpand[] = {"",0.1,1};
-        soundCollapse[] = {"",0.1,1};
-        maxHistoryDelay = 1;
-        autoScrollSpeed = -1;
-        autoScrollDelay = 5;
-        autoScrollRewind = 0;
-
-	class ScrollBar { 
-		color[] = {1, 1, 1, 0.6}; 
-		colorActive[] = {1, 1, 1, 1}; 
-		colorDisabled[] = {1, 1, 1, 0.3}; 
-		thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
-		arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-		arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-	};*/
-};
 
 class RscPicture 
 {
@@ -429,6 +389,44 @@ class RscButton
     colorBackground[] = {0, 0, 0, 0.5};
     colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
     colorBackgroundActive[] = {1, 1, 1, .2};
+    colorFocused[] = {1, 1, 1, .2};
+    colorShadow[] = {0.023529,0,0.0313725,0};
+    colorBorder[] = {0.023529,0,0.0313725,1};
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
+	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
+  	animTextureDefault = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\normal_ca.paa";
+	animTextureNormal = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\normal_ca.paa";
+	animTextureDisabled = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\normal_ca.paa";
+	animTextureOver = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\over_ca.paa";
+	animTextureFocused = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\focus_ca.paa";
+	animTexturePressed = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\down_ca.paa";
+    style = 2;
+    x = 0;
+    y = 0;
+    w = 0.055589;
+    h = 0.039216;
+    font = "PuristaMedium";
+    sizeEx = 0.03921;
+    offsetX = 0.003;
+    offsetY = 0.003;
+    offsetPressedX = 0.002;
+    offsetPressedY = 0.002;
+    borderSize = 0;
+};
+
+class RscButtonALT
+{
+    
+   access = 0;
+    type = CT_BUTTON;
+    text = "";
+    colorText[] = {1,1,1,.9};
+    colorDisabled[] = {0,0,0,1};
+    colorBackground[] = {1, 1, 1, 0.4};
+    colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
+    colorBackgroundActive[] = {1, 1, 1, 0.8};
     colorFocused[] = {1, 1, 1, .2};
     colorShadow[] = {0.023529,0,0.0313725,0};
     colorBorder[] = {0.023529,0,0.0313725,1};

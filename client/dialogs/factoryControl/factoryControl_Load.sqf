@@ -1,6 +1,7 @@
 #include "factoryControl_Defines.hpp";
 disableSerialization;
 
+playerCredits = 350; 
 
 _factoryDiag = createdialog "factoryControl_Dialog";
 
@@ -10,7 +11,10 @@ _progress1 = _Dialog displayCtrl PROGRESS1;
 _progress2 = _Dialog displayCtrl PROGRESS2;
 _progress3 = _Dialog displayCtrl PROGRESS3;
 _progress4 = _Dialog displayCtrl PROGRESS4;
+_cost = _Dialog displayCtrl COSTTEXT;
 
+_resourceCost = 0;
+_creditCost = 0;
 _credits = playerCredits;
 _resources = W_TWR1_Resources;
 
@@ -31,6 +35,7 @@ if (playerCredits < 1)then{
 };
 
 _fundsText ctrlSetStructuredText parseText format["<t size='0.75'>Resources: %1 Credits: %2</t>", _resources, _credits];
+_cost ctrlSetStructuredText parseText format["<t size='0.75'>Resource Cost: %1 Credit Cost: %2</t>", _resourceCost, _creditCost];
 
 
 

@@ -11,3 +11,5 @@
 #define PROGRESS4	   9009	
 #define PURCHASEBUTTON 9010
 #define CANCELBUTTON   9011
+#define VEHICLELIST    9012
+#define COSTTEXT       9013
