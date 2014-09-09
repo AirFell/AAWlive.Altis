@@ -185,7 +185,7 @@ player addAction [
 //	createDialog "";
 	if (isNil "HEMTT_West_TWR2") then {
 		_dir = getDir W_TWR1_Factory_Ctrl;
-		_pos = getPos W_TWR1_Factory_Spawn1;
+		_pos = [getPos W_TWR1_Factory_Spawn1 select 0, getPos W_TWR1_Factory_Spawn1 select 1, 0];
 		_truck = createVehicle ["B_Truck_01_box_F", _pos, [], 0, "None"];
 		_truck setDir _dir;
 		_truck setPos _pos;
