@@ -17,14 +17,14 @@ switch (_this select 0) do{
 						
 						_dir = getDir W_TWR1;
 						_pos = W_TWR1_Deposit_Marker modelToWorld [0,-50,0];
-						_newPos = [_pos, 0, 60, 20, 0, 10, 0] call BIS_fnc_findSafePos;
+						_newPos = [_pos, 0, 60, 20, 0, 5, 0] call BIS_fnc_findSafePos;
 						
 						//creates the original tower
-						W_TWR1_Barracks = createVehicle ["CamoNet_BLUFOR_open_F", _newPos, [], 0, "None"];
-						_shed setDir _dir + 180;
-						_shed setPos _newPos;
-						W_TWR1_Barracks setVariable ["R3F_LOG_disabled", true, true];
-						W_TWR1_Barracks setVehicleVarName "W_TWR1_Barracks";
+						_camoNet = createVehicle ["CamoNet_BLUFOR_open_F", _newPos, [], 0, "None"];
+						_camoNet setDir _dir + 180;
+						_camoNet setPos _newPos;
+						_camoNet setVariable ["R3F_LOG_disabled", true, true];
+						_camoNet setVehicleVarName "W_TWR1_Barracks";
 						publicVariable "W_TWR1_Barracks";
 						
 						//creates and orients barracks/armory control infostand.

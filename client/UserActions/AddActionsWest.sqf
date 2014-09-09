@@ -397,7 +397,7 @@ player addAction [
 			_pos = position HEMTT_West;
 			_yPos = _pos select 1;
 			_pos set [1, _yPos - 15];
-			_newPos = [_pos, 0, 75, 25, 0, 10, 0] call BIS_fnc_findSafePos;
+			_newPos = [_pos, 0, 75, 25, 0, 5, 0] call BIS_fnc_findSafePos;
 						
 			//tests if base is going to be built too close to another base
 			_distanceCheck = 0;
