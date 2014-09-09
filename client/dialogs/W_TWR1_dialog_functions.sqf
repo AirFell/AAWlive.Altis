@@ -145,16 +145,16 @@ switch (_this select 0) do{
 						W_TWR1_Factory_Spawn1 setVehicleVarName "W_TWR1_Factory_Spawn1";
 						publicVariable "W_TWR1_Factory_SpawnMarker1";
 						
-						_greenlight2 = createVehicle ["Land_Flush_Light_green_F", _newPos, [], 0, "NONE"];
-						_greenlight2 attachTo [_shed, [0, 0, -3.8]];
-						_greenlight2 setVariable ["R3F_LOG_disabled", true, true];
-						_greenlight2 setVehicleVarName "W_TWR1_Factory_Spawn2";
+						W_TWR1_Factory_Spawn2 = createVehicle ["Land_Flush_Light_green_F", _newPos, [], 0, "NONE"];
+						W_TWR1_Factory_Spawn2 attachTo [_shed, [0, 0, -3.8]];
+						W_TWR1_Factory_Spawn2 setVariable ["R3F_LOG_disabled", true, true];
+						W_TWR1_Factory_Spawn2 setVehicleVarName "W_TWR1_Factory_Spawn2";
 						publicVariable "W_TWR1_Factory_SpawnMarker2";
 						
-						_greenlight3 = createVehicle ["Land_Flush_Light_green_F", _newPos, [], 0, "NONE"];
-						_greenlight3 attachTo [_shed, [0, -8, -3.8]];
-						_greenlight3 setVariable ["R3F_LOG_disabled", true, true];
-						_greenlight3 setVehicleVarName "W_TWR1_Factory_Spawn3";
+						W_TWR1_Factory_Spawn3 = createVehicle ["Land_Flush_Light_green_F", _newPos, [], 0, "NONE"];
+						W_TWR1_Factory_Spawn3 attachTo [_shed, [0, -8, -3.8]];
+						W_TWR1_Factory_Spawn3 setVariable ["R3F_LOG_disabled", true, true];
+						W_TWR1_Factory_Spawn3 setVehicleVarName "W_TWR1_Factory_Spawn3";
 						publicVariable "W_TWR1_Factory_SpawnMarker3";
 					
 						//Subtracts resource cost from variable
