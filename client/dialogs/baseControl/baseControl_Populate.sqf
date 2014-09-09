@@ -48,20 +48,20 @@ switch(_this select 0) do
 {
 	case 0: 
 	{	
-        _build buttonSetAction "hint ""You are trying to build a barracks!""";
-		_upgrade buttonSetAction "hint ""You are trying to upgrade a barracks!""";
+        _build buttonSetAction "[""BaseCTRL"", ""BaBuild""]execVM ""client\dialogs\W_TWR1_dialog_functions.sqf""";
+		_upgrade buttonSetAction "[""BaseCTRL"", ""BaUpgrade""]execVM ""client\dialogs\W_TWR1_dialog_functions.sqf""";
 		_depotDescription ctrlSetStructuredText parseText "<t size='1'>This is where the barracks description bullshit goes!</t>";
 	};
 	case 1: 
 	{
-		_build buttonSetAction "hint ""You are trying to build a factory!""";
-		_upgrade buttonSetAction "hint ""You are trying to upgrade a barracks!""";
+		_build buttonSetAction "[""BaseCTRL"", ""FactBuild""]execVM ""client\dialogs\W_TWR1_dialog_functions.sqf""";
+		_upgrade buttonSetAction "[""BaseCTRL"", ""FactUpgrade""]execVM ""client\dialogs\W_TWR1_dialog_functions.sqf""";
 		_depotDescription ctrlSetStructuredText parseText "<t size='1'>This is where the factory description bullshit goes!</t>";
 	};
 	case 2: 
 	{
-		_build buttonSetAction "hint ""you are trying to build a radar!""";
-		_upgrade buttonSetAction "hint ""You are trying to upgrade a barracks!""";
+		_build buttonSetAction "[""BaseCTRL"", ""RadarBuild""]execVM ""client\dialogs\W_TWR1_dialog_functions.sqf""";
+		_upgrade buttonSetAction "[""BaseCTRL"", ""RadarUpgrade""]execVM ""client\dialogs\W_TWR1_dialog_functions.sqf""";
 		_depotDescription ctrlSetStructuredText parseText "<t size='1'>This is where the radar description bullshit goes!</t>";
 	};
 };

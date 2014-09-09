@@ -25,7 +25,7 @@ for [{_x=0},{_x<=_size},{_x=_x+1}] do
 	_vehText = _vehList lbText _selectedItem;
 	{if(_vehText == _x select 0) then{
 		sleep 1;
-		_ObjectsInArea = [(getPos W_TWR1_Deposit_Marker) select 0, (getPos W_TWR1_Deposit_Marker) select 1] nearObjects 2;
+		_ObjectsInArea = [(getPos W_TWR1_Factory_Spawn1) select 0, (getPos W_TWR1_Factory_Spawn1) select 1] nearObjects 2;
 		if(count _ObjectsInArea <= 1) then {
 			_resourceCost = _x select 2;
 			_creditCost = _x select 3;
@@ -33,8 +33,8 @@ for [{_x=0},{_x<=_size},{_x=_x+1}] do
 			if(_resourceCost > _resources) exitWith {hintsilent "You do not have enough Resources"};
 			if(_resourceCost < 1) exitWith {hintsilent "You cant buy this silly."};
 				closeDialog 0;
-				_spawnVehicle = createVehicle [(_x select 1),getPos W_TWR1_Deposit_Marker,[], 0,"CAN_COLLIDE"];
-				_spawnVehicle setDir (getDir W_TWR1_Deposit_Marker) + 90;
+				_spawnVehicle = createVehicle [(_x select 1),getPos W_TWR1_Factory_Spawn1,[], 0,"CAN_COLLIDE"];
+				_spawnVehicle setDir (getDir W_TWR1_Factory_Spawn1) + 90;
 				clearMagazineCargoGlobal _spawnVehicle;
 				clearWeaponCargoGlobal _spawnVehicle;
 				sleep 0.5;

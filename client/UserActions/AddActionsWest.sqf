@@ -168,19 +168,12 @@ player addAction [
 ];
 
 //addaction for Tower 1 Base Control
-player addAction [
-	"Access Base Controls",
-	{
-	createDialog "AF_W_TWR1_CTRL";
-	sleep 1;
-	ctrlSetText[1000, format["Resources = %1", W_TWR1_Resources]]
-	},
-	nil, 1, True, True, "", "(player distance W_TWR1_BaseCTRL) < 3"
-];
+player addAction ["Access Base Controls", "client\dialogs\baseControl\baseControl_Load.sqf", nil, 1, True, True, "", "(player distance W_TWR1_BaseCTRL) < 3"];
+
 
 //addaction for Tower 1 vehicle factory control (currently in a test method)
 player addAction [
-	"Access Vehicle Factory",
+	"HEMTT_West_TWR2",
 	{
 //	createDialog "";
 	if (isNil "HEMTT_West_TWR2") then {
@@ -198,6 +191,7 @@ player addAction [
 	},
 	nil, 1, True, True, "", "(player distance W_TWR1_Factory_Ctrl) < 3"
 ];
+player addAction ["Access Factory Controls", "client\dialogs\factoryControl\factoryControl_Load.sqf", nil, 1, True, True, "", "(player distance W_TWR1_Factory_Ctrl) < 3"];
 
 //addaction for Tower 1 barracks/armory control
 player addAction [
@@ -210,6 +204,7 @@ player addAction [
 	},
 	nil, 1, True, True, "", "(player distance W_TWR1_Barracks_Ctrl) < 3"
 ];
+
 
 //////////////////////////////////////////////////////////////
 ////////////////Tower 2 (FOB 1) addActions////////////////////
