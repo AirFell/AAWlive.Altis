@@ -2,7 +2,6 @@ diag_log "A mission has started!";
 /*
 notes:
 		need to make some sort of mission ending trigger that will execVM the mission_init again.
-		need to add a switch from the execVM from mission_init that picks one of the random missions.
 */
 
 
