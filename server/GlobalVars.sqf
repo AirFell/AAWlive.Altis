@@ -4,6 +4,7 @@ publicVariable "Existing_Tower_Array";
 Error_pos = [10808.3,10582.9];
 publicVariable "Error_pos";
 
+MissionCounter = 0;
 
 /////////////////////////////////////////////////////////
 //West base resources

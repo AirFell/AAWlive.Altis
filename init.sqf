@@ -16,14 +16,14 @@ execVM "R3F_LOG\init.sqf";
 	_nul = []execVM "server\GlobalVars.sqf";
 
 	diag_log "And the server got through all its init files!";
-
+	_nul = []execVM "server\missions\mission_init.sqf";
 //} else {
 
 	diag_log "The client is running!";
 //Client-side stuff
 
-	_nul = [] execVM 'client\player_markers.sqf';
-	_nul = [] execVM "client\taginit.sqf";
+	_nul = []execVM 'client\player_markers.sqf';
+	_nul = []execVM "client\taginit.sqf";
 	_nul = []execVM "onPlayerKilled.sqf";
 	
 	playerCredits = 0;
@@ -31,6 +31,9 @@ execVM "R3F_LOG\init.sqf";
 	"mrkBlue" setMarkerAlphaLocal 0;
 	"mrkRed" setMarkerAlphaLocal 0;
 	"mrkGreen" setMarkerAlphaLocal 0;
+	"mrkMission" setMarkerAlphaLocal 0;
+	"no_Mission" setMarkerAlphaLocal 0;
+
 	call compile preprocessFileLineNumbers "client\baseConfig.sqf";
 	
 	diag_log "The client got through all its init files!";
