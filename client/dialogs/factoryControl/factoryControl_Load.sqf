@@ -2,6 +2,7 @@
 disableSerialization;
 
 playerCredits = 350; 
+W_TWR1_Resources = 350;
 
 _factoryDiag = createdialog "factoryControl_Dialog";
 

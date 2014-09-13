@@ -38,3 +38,21 @@ execVM "R3F_LOG\init.sqf";
 	
 	diag_log "The client got through all its init files!";
 //};
+
+
+
+
+//vehicle pilot only test
+_playerSide = str(playerSide);
+if(_playerSide == "WEST") then {
+	["Air","B_Helipilot_F"] execVM "driverCheck.sqf";
+	["Tank", "B_crew_F"] execVM "driverCheck.sqf";
+};
+if(_playerSide == "EAST") then {
+	["Air","O_Helipilot_F"] execVM "driverCheck.sqf";
+	["Tank", "O_crew_F"] execVM "driverCheck.sqf";
+};
+if(_playerSide == "GUER") then {
+	["Air","I_Helipilot_F"] execVM "driverCheck.sqf";
+	["Tank", "I_crew_F"] execVM "driverCheck.sqf";
+};

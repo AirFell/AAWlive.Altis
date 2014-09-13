@@ -30,10 +30,27 @@ for [{_x=0},{_x<=_size},{_x=_x+1}] do
 		if(_creditCost > _credits) exitWith {hintsilent "You do not have enough Credits"};
 		if(_resourceCost > _resources) exitWith {hintsilent "You do not have enough Resources"};
 		if(_resourceCost < 1) exitWith {hintsilent "You cant buy this silly."};
-		_ObjectsInArea0 = [(getPos W_TWR1_Factory_Helipad) select 0, (getPos W_TWR1_Factory_Helipad) select 1] nearObjects 2;
-		_ObjectsInArea1 = [(getPos W_TWR1_Factory_Spawn1) select 0, (getPos W_TWR1_Factory_Spawn1) select 1] nearObjects 2;
-		_ObjectsInArea2 = [(getPos W_TWR1_Factory_Spawn2) select 0, (getPos W_TWR1_Factory_Spawn2) select 1] nearObjects 2;
-		_ObjectsInArea3 = [(getPos W_TWR1_Factory_Spawn3) select 0, (getPos W_TWR1_Factory_Spawn3) select 1] nearObjects 2;
+		_ObjectsInArea0 = [(getPos W_TWR1_Factory_Helipad) select 0, (getPos W_TWR1_Factory_Helipad) select 1] nearObjects 3;
+		_ObjectsInArea1 = [(getPos W_TWR1_Factory_Spawn1) select 0, (getPos W_TWR1_Factory_Spawn1) select 1] nearObjects 3;
+		_ObjectsInArea2 = [(getPos W_TWR1_Factory_Spawn2) select 0, (getPos W_TWR1_Factory_Spawn2) select 1] nearObjects 3;
+		_ObjectsInArea3 = [(getPos W_TWR1_Factory_Spawn3) select 0, (getPos W_TWR1_Factory_Spawn3) select 1] nearObjects 3;
+		_airClassType = "";
+		_tankClassType = "";
+		_playerSide = str(playerSide);
+		if(_playerSide == "WEST") then {
+		_airClassType = "B_Helipilot_F";
+		_tankClassType = "B_crew_F";
+		};
+		if(_playerSide == "EAST") then {
+		_airClassType = "O_Helipilot_F";
+		_tankClassType = "O_crew_F";
+		};
+		if(_playerSide == "GUER") then {
+		_airClassType = "I_Helipilot_F";
+		_tankClassType = "I_crew_F";
+		};
+		if (((_x select 1) isKindOf "Tank")&&(typeOf player != _tankClassType)) exitWith {hint "You aren't the required class to operate this vehicle"};
+		if (((_x select 1) isKindOf "Air")&&(typeOf player != _airClassType)) exitWith {hint "You aren't the required class to operate this vehicle"};
 		if (((_x select 1) isKindOf "Air")&&(count _ObjectsInArea0 <= 1)) then {
 				closeDialog 0;
 				_spawnVehicle = createVehicle [(_x select 1),[getPos W_TWR1_Factory_Helipad select 0, getPos W_TWR1_Factory_Helipad select 1, 0],[], 0,"CAN_COLLIDE"];
