@@ -18,9 +18,9 @@ while {(true)} do {
 				player action ["GetOut",_veh];
 				waitUntil {vehicle player == player};
 				hint format ["RESTRICTED VEHICLE\n\nRequired class: %1",_crewTypeName];
-					if (isEngineOn _veh) then {
-						_veh engineOn false
-					};
+				if (isEngineOn _veh) then {
+					_veh engineOn false
+				};
 			};
 		};
 	};
