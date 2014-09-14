@@ -42,3 +42,11 @@ How do Bases work in AAW?:
   From the FOB three more smaller "disposable" outposts can be built. These don't allow further upgrades, but can be used for vehicle/weapon storage, vehicle repairs, and have a small radar station attached.
   
   Bases cannot be placed within a certain distance from another base- friendly or enemy.
+
+
+Temporary Stuff: Important links:
+http://forums.bistudio.com/showthread.php?165351-Change-player-class-in-mission
+https://community.bistudio.com/wiki/Arma_3_CfgVehicles_WEST
+https://community.bistudio.com/wiki/selectPlayer
+https://community.bistudio.com/wiki/addSwitchableUnit
+http://forums.bistudio.com/showthread.php?50255-Unit-Switching
