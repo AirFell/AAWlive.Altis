@@ -22,16 +22,14 @@ MissionCounter = 0;
 	publicVariable "W_TWR4_Resources";
 	
 //West tower counters: For testing if it exists or not.
-//	W_TWR_Counter = 0;
 	W_TWR1_Counter = 0;
 	W_TWR2_Counter = 0;
 	W_TWR3_Counter = 0;
 	W_TWR4_Counter = 0;
-	publicVariable "W_TWR_Counter";
-//	publicVariable "W_TWR1_Counter";
-//	publicVariable "W_TWR2_Counter";
-//	publicVariable "W_TWR3_Counter";
-//	publicVariable "W_TWR4_Counter";
+	publicVariable "W_TWR1_Counter";
+	publicVariable "W_TWR2_Counter";
+	publicVariable "W_TWR3_Counter";
+	publicVariable "W_TWR4_Counter";
 	
 //West Tower 1 Counters
 	W_TWR1_Barracks_Counter = 0;

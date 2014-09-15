@@ -1,98 +1,58 @@
 //NOTE: Check counter if statements before launching live version.
 
-/*
 //Test Addaction
 player addaction [
-	"Test Action",
+	"Enable Self-Destruct Sequence",
 	{
-						_dir = getDir player;
-						//W_TWR1
-						_dir = _dir + 90;
-						_pos = getPos player;
-						//W_TWR1_Deposit_Marker;
-						_newPos = [_pos, 30, 45, 30, 0, 10, 0] call BIS_fnc_findSafePos;
-						
-						//creates the original tower
-						_shed = createVehicle ["Land_Shed_Big_F", _newPos, [], 0, "None"];
-						_shed setDir _dir;
-						_shed setVariable ["R3F_LOG_disabled", true, true];
-						
-						W_TWR1_Factory_Counter = 1;
-						publicVariable "W_TWR1_Barracks_Counter";
-						
-						//creates and orients barracks/armory control infostand.
-						W_TWR1_Factory_Ctrl = createVehicle ["Land_InfoStand_V2_F", _newPos, [], 0, "NONE"];
-						W_TWR1_Factory_Ctrl attachTo [_shed,[0, -17, -2.8]];
-						W_TWR1_Factory_Ctrl setDir -90;
-						W_TWR1_Factory_Ctrl setVariable ["R3F_LOG_disabled", true, true];
-						W_TWR1_Factory_Ctrl setVehicleVarName "W_TWR1_Factory_Ctrl";
-						publicVariable "W_TWR1_Factory_Ctrl";
+		diag_log "Siren Started.";
+		W_TWR1_SelfDestruct = 1;
+		publicVariable "W_TWR1_SelfDestruct";
+		//how long do we want until the "bomb" goes off?
+		for [{_lc = 0},{_lc < 30},{_lc = _lc +1}] do{
+			playSound3D ["A3\Sounds_F\sfx\siren.wss", W_TWR1, false, getPos W_TWR1, 5, 1, 500];
+			sleep 2;
+		};
 
-						W_TWR1_Factory_Helipad = createVehicle ["Land_HelipadCircle_F", _newPos, [], 0, "NONE"];
-						W_TWR1_Factory_Helipad attachTo [_shed, [0, -35, 0]];
-						W_TWR1_Factory_Helipad setDir 90;
-						W_TWR1_Factory_Helipad setVariable ["R3F_LOG_disabled", true, true];
-						W_TWR1_Factory_Helipad setVehicleVarName "W_TWR1_Factory_Helipad";
-						publicVariable "W_TWR1_Factory_Helipad";
-						
-						//2 of these halogen
-						
-						_h_light1 = createVehicle ["Land_LampHalogen_F", _newPos, [], 0, "NONE"];
-						_h_light1 attachTo [_shed, [7.9, 12.02, -3.8]];
-						_h_light1 setDir -45;
-						_h_light1 setVariable ["R3F_LOG_disabled", true, true];
-						
-						_h_light2 = createVehicle ["Land_LampHalogen_F", _newPos, [], 0, "NONE"];
-						_h_light2 attachTo [_shed, [7.9, -12, -3.8]];
-						_h_light2 setDir +45;
-						_h_light2 setVariable ["R3F_LOG_disabled", true, true];
-						
-						//1 of these lamp
-						
-						_light1 = createVehicle ["Land_LampShabby_F", _newPos, [], 0, "NONE"];
-						_light1 attachTo [_shed, [-1, -17, -2]];
-						_light1 setDir +90;
-						_light1 setVariable ["R3F_LOG_disabled", true, true];
-						
-						//1 of these yellow light
-						
-						_yellowLight = createVehicle ["Land_Flush_Light_yellow_F", [getPos W_TWR1_Factory_Helipad select 0, getPos W_TWR1_Factory_Helipad select 1, 0], [], 0, "NONE"];
-						_yellowLight setVariable ["R3F_LOG_disabled", true, true];
-						
-						//4 of these blue light
-						
-						_bluelight1 = createVehicle ["Land_runway_edgelight_blue_F", [(getPos W_TWR1_Factory_Helipad select 0) -5, (getPos W_TWR1_Factory_Helipad select 1) -5, 0], [], 0, "NONE"];
-						_bluelight1 setVariable ["R3F_LOG_disabled", true, true];
-						
-						_bluelight3 = createVehicle ["Land_runway_edgelight_blue_F", [(getPos W_TWR1_Factory_Helipad select 0) -5, (getPos W_TWR1_Factory_Helipad select 1) +5, 0], [], 0, "NONE"];
-						_bluelight3 setVariable ["R3F_LOG_disabled", true, true];
-						
-						_bluelight4 = createVehicle ["Land_runway_edgelight_blue_F", [(getPos W_TWR1_Factory_Helipad select 0) +5, (getPos W_TWR1_Factory_Helipad select 1) -5, 0], [], 0, "NONE"];
-						_bluelight4 setVariable ["R3F_LOG_disabled", true, true];
-						
-						_bluelight6 = createVehicle ["Land_runway_edgelight_blue_F", [(getPos W_TWR1_Factory_Helipad select 0) +5, (getPos W_TWR1_Factory_Helipad select 1) +5, 0], [], 0, "NONE"];
-						_bluelight6 setVariable ["R3F_LOG_disabled", true, true];
-						
-						//3 of these for markers in the vehicle factory
-						_greenlight1 = createVehicle ["Land_Flush_Light_green_F", _newPos, [], 0, "NONE"];
-						_greenlight1 attachTo [_shed, [0, 8, -3.475]];
-						_greenlight1 setVariable ["R3F_LOG_disabled", true, true];
-						_greenlight1 setVehicleVarName "W_TWR1_Factory_SpawnMarker1";
-						publicVariable "W_TWR1_Factory_SpawnMarker1";
-						
-						_greenlight2 = createVehicle ["Land_Flush_Light_green_F", _newPos, [], 0, "NONE"];
-						_greenlight2 attachTo [_shed, [0, 0, -3.475]];
-						_greenlight2 setVariable ["R3F_LOG_disabled", true, true];
-						_greenlight2 setVehicleVarName "W_TWR1_Factory_SpawnMarker2";
-						publicVariable "W_TWR1_Factory_SpawnMarker2";
-						
-						_greenlight3 = createVehicle ["Land_Flush_Light_green_F", _newPos, [], 0, "NONE"];
-						_greenlight3 attachTo [_shed, [0, -8, -3.475]];
-						_greenlight3 setVariable ["R3F_LOG_disabled", true, true];
-						_greenlight3 setVehicleVarName "W_TWR1_Factory_SpawnMarker3";
-						publicVariable "W_TWR1_Factory_SpawnMarker3";
-	}
+		_objectsList = nearestObjects [getPos W_TWR1, ["Static","Thing"], 500];
+		{
+			_x setDamage 1;
+		}forEach _objectsList;
+		sleep 30;
+		//reset tower things to 0 as if it hasn't been built yet.
+		W_TWR1_SelfDestruct = 0;
+		W_TWR1_Resources = 0;
+		W_TWR1_Counter = 0;
+		W_TWR1_Barracks_Counter = 0;
+		W_TWR1_Factory_Counter = 0;
+		W_TWR1_Radar_Counter = 0;
+		Existing_Tower_Array = Existing_Tower_Array - [W_TWR1];
+		publicVariable "W_TWR1_SelfDestruct";
+		publicVariable "W_TWR1_Resources";
+		publicVariable "W_TWR1_Counter";
+		publicVariable "W_TWR1_Barracks_Counter";
+		publicVariable "W_TWR1_Factory_Counter";
+		publicVariable "W_TWR1_Radar_Counter";
+		publicVariable "Existing_Tower_Array";
+		
+		diag_log "Objects damaged. Counters, resources, and array reset.";
+		diag_log format["Tower Array: %1", Existing_Tower_Array];
+	},
+	nil, 1, True, True, "", "(player distance W_TWR1_SELF_DESTRUCT) < 3"
 ];
+
+/*
+//Test Addaction
+if (W_TWR1_SelfDestruct > 0) then {
+	player addaction [
+		"Disable Self-Destruct Sequence",
+		{
+			W_TWR1_SelfDestruct = 0;
+			diag_log "Self-Destruct disabled.";
+			publicVariable "W_TWR1_SelfDestruct";
+		},
+		nil, 1, True, True, "", "(player distance W_TWR1_SELF_DESTRUCT) < 3"
+	];
+};
 */
 
 /*
@@ -438,11 +398,11 @@ player addAction [
 					W_TWR1_Deposit_Marker setVehicleVarName "W_TWR1_Deposit_Marker";
 					publicVariable "W_TWR1_Deposit_Marker";
 					
-					_object = createVehicle ["Land_Device_disassembled_F", _newPos, [], 0, "NONE"];
-					_object attachTo [W_TWR1, [ -3.5, -1.5, 0.5]];
-					_object setDir 0;
-					_object setVariable ["R3F_LOG_disabled", true, true];
-					_object setVehicleVarName "W_TWR1_SELF_DESTRUCT";
+					W_TWR1_SELF_DESTRUCT = createVehicle ["Land_Device_disassembled_F", _newPos, [], 0, "NONE"];
+					W_TWR1_SELF_DESTRUCT attachTo [W_TWR1, [ -3.5, -1.5, 0.5]];
+					W_TWR1_SELF_DESTRUCT setDir 0;
+					W_TWR1_SELF_DESTRUCT setVariable ["R3F_LOG_disabled", true, true];
+					W_TWR1_SELF_DESTRUCT setVehicleVarName "W_TWR1_SELF_DESTRUCT";
 					publicVariable "W_TWR1_SELF_DESTRUCT";
 			
 					//Turns the needed objects into public variables so everyone can access them by name
