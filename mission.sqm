@@ -16,7 +16,6 @@ class Mission
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Static_F",
-		"A3_Structures_F_Ind_Cargo",
 		"A3_Structures_F_Items_Vessels",
 		"a3_soft_f_offroad_01"
 	};
@@ -33,7 +32,6 @@ class Mission
 		"A3_Soft_F_Gamma_Quadbike",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Structures_F_Items_Vessels",
-		"A3_Structures_F_Ind_Cargo",
 		"a3_map_altis"
 	};
 	randomSeed=8243079;
@@ -66,7 +64,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={19477.895,21.126278,16546.191};
+					position[]={19457.893,22.317572,16415.096};
 					azimut=575.74902;
 					id=0;
 					side="WEST";
@@ -161,7 +159,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={19480.742,21.152674,16544.801};
+					position[]={19460.74,22.38975,16413.705};
 					azimut=575.74902;
 					id=5;
 					side="WEST";
@@ -175,10 +173,10 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=45;
+		items=44;
 		class Item0
 		{
-			position[]={19470.498,21.099667,16539.844};
+			position[]={19450.496,22.200001,16408.748};
 			azimut=312.92099;
 			special="NONE";
 			id=6;
@@ -634,7 +632,7 @@ class Mission
 		};
 		class Item39
 		{
-			position[]={19467.98,21.101202,16536.891};
+			position[]={19447.979,22.190069,16405.795};
 			id=45;
 			side="EMPTY";
 			vehicle="Land_MetalBarrel_F";
@@ -642,15 +640,15 @@ class Mission
 		};
 		class Item40
 		{
-			position[]={19465.828,21.047451,16539.086};
+			position[]={19448.09,22.187021,16404.541};
 			id=46;
 			side="EMPTY";
-			vehicle="Land_CargoBox_V1_F";
+			vehicle="Land_MetalBarrel_F";
 			skill=0.60000002;
 		};
 		class Item41
 		{
-			position[]={19468.092,21.119389,16535.637};
+			position[]={19448.949,22.191242,16405.264};
 			id=47;
 			side="EMPTY";
 			vehicle="Land_MetalBarrel_F";
@@ -658,7 +656,7 @@ class Mission
 		};
 		class Item42
 		{
-			position[]={19468.951,21.12122,16536.359};
+			position[]={19447.156,22.187052,16405.143};
 			id=48;
 			side="EMPTY";
 			vehicle="Land_MetalBarrel_F";
@@ -666,16 +664,8 @@ class Mission
 		};
 		class Item43
 		{
-			position[]={19467.158,21.098955,16536.238};
+			position[]={19449.355,22.189478,16404.197};
 			id=49;
-			side="EMPTY";
-			vehicle="Land_MetalBarrel_F";
-			skill=0.60000002;
-		};
-		class Item44
-		{
-			position[]={19469.357,21.140875,16535.293};
-			id=50;
 			side="EMPTY";
 			vehicle="Land_MetalBarrel_F";
 			skill=0.60000002;
@@ -725,7 +715,7 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={19461.904,21.01894,16537.031};
+			position[]={19441.902,22.194927,16405.936};
 			name="respawn_west";
 			type="Empty";
 			angle=67.198891;

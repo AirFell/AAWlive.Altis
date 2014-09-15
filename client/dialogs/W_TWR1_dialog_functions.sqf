@@ -20,28 +20,39 @@ switch (_this select 0) do{
 						_newPos = [_pos, 0, 60, 20, 0, 5, 0] call BIS_fnc_findSafePos;
 						
 						//creates the original tower
-						_camoNet = createVehicle ["CamoNet_BLUFOR_open_F", _newPos, [], 0, "None"];
-						_camoNet setDir _dir + 180;
-						_camoNet setPos _newPos;
-						_camoNet setVariable ["R3F_LOG_disabled", true, true];
-						_camoNet setVehicleVarName "W_TWR1_Barracks";
+						_gazeebo = createVehicle ["Land_GH_Gazebo_F", _newPos, [], 0, "None"];
+						_gazeebo setDir _dir + 180;
+						_gazeebo setPos _newPos;
+						_gazeebo setVectorUp [0,0,1];
+						_gazeebo setVariable ["R3F_LOG_disabled", true, true];
+						_gazeebo setVehicleVarName "W_TWR1_Barracks";
 						publicVariable "W_TWR1_Barracks";
 						
 						//creates and orients barracks/armory control infostand.
 						W_TWR1_Barracks_Ctrl = createVehicle ["Land_InfoStand_V2_F", _newPos, [], 0, "NONE"];
-						W_TWR1_Barracks_Ctrl attachTo [W_TWR1_Barracks,[0, 0, 0]];
-						W_TWR1_Barracks_Ctrl setDir 90;
+						W_TWR1_Barracks_Ctrl attachTo [_gazeebo,[-6.5, -1, -1.25]];
+						W_TWR1_Barracks_Ctrl setDir -90;
 						W_TWR1_Barracks_Ctrl setVariable ["R3F_LOG_disabled", true, true];
 						W_TWR1_Barracks_Ctrl setVehicleVarName "W_TWR1_Barracks_Ctrl";
 						publicVariable "W_TWR1_Barracks_Ctrl";
+						
+						_weaponbox = createVehicle ["Land_Pallet_MilBoxes_F", _newPos, [], 0, "NONE"];
+						_weaponbox attachTo [_gazeebo,[-6, 2, -1.4]];
+						_weaponbox setVariable ["R3F_LOG_disabled", true, true];
+						_weaponbox setVehicleVarName "W_TWR1_Weapon_Box";
+						publicVariable "W_TWR1_Weapon_Box";
+						
+						_Light = createVehicle ["Land_LampShabby_F", _newPos, [], 0, "NONE"];
+						_Light attachTo [_gazeebo,[-0.3, .65, -1.5]];
+						_Light setDir -90;
+						_Light setVariable ["R3F_LOG_disabled", true, true];
 			
 						//Set Counter so it doesn't build more than once.
 						W_TWR1_Barracks_Counter = 1;
 						publicVariable "W_TWR1_Barracks_Counter";
 
 						//create marker for player spawn point
-						W_TWR1_Respawn_Marker = createMarker ["respawn_west1", getPos W_TWR1_Barracks];
-						publicVariable "W_TWR1_Respawn_Marker";
+						respawn_west1 = createMarker ["respawn_west1", [(getPos _gazeebo select 0) + 2.5, (getPos _gazeebo select 1) + 2.5, 0]];
 					
 						//create marker for where ammo crates spawn at
 						
