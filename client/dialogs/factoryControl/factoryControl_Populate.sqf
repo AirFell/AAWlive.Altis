@@ -2,7 +2,7 @@
 
 #include "factoryControl_Defines.hpp";
 disableSerialization;
-private ["_switch", "_dialog", "_vehlisttext", "_vehlist", "_colorlist", "_vehArray", "_noBuzzard", "_playerSideNum", "_vehClass", "_vehPicture", "_vehlistIndex"];
+private ["_switch", "_dialog", "_vehlisttext", "_vehlist", "_vehArray", "_vehClass", "_vehPicture", "_vehlistIndex"];
 _switch = _this select 0;
 
 // Grab access to the controls

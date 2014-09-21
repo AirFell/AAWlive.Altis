@@ -3,6 +3,7 @@
 #include "client\dialogs\W_TWR1_Dialogs.hpp"
 #include "client\dialogs\baseControl\BaseControl.hpp"
 #include "client\dialogs\factoryControl\factoryControl.hpp"
+#include "client\dialogs\classControl\classControl.hpp"
 
 
 respawn = 3;

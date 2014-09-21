@@ -1,8 +1,8 @@
 #include "factoryControl_Defines.hpp";
 disableSerialization;
 
-playerCredits = 350; 
-W_TWR1_Resources = 350;
+playerCredits = 100000; 
+W_TWR1_Resources = 100000;
 
 _factoryDiag = createdialog "factoryControl_Dialog";
 

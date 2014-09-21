@@ -154,16 +154,8 @@ player addAction [
 player addAction ["Access Factory Controls", "client\dialogs\factoryControl\factoryControl_Load.sqf", nil, 1, True, True, "", "(player distance W_TWR1_Factory_Ctrl) < 3"];
 
 //addaction for Tower 1 barracks/armory control
-player addAction [
-	"Access Armory",
-	{
-//	createDialog "";
-	hint "Feature needed!";
-	sleep 1;
-//	ctrlSetText[1000, format["Resources = %1", W_TWR1_Resources]]
-	},
-	nil, 1, True, True, "", "(player distance W_TWR1_Barracks_Ctrl) < 3"
-];
+player addAction ["Access Armory", "client\dialogs\classControl\classControl_Load.sqf", nil, 1, True, True, "", "(player distance W_TWR1_Barracks_Ctrl) < 3"];
+
 
 
 //////////////////////////////////////////////////////////////

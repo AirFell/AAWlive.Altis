@@ -13,3 +13,4 @@ _RandomPosG = GuerRespawnArray select floor random count GuerRespawnArray;
 
 waitUntil {alive player};
 _nul = []execVM "client\sideSwitch.sqf";
+
